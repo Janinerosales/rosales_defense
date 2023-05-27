@@ -17,7 +17,7 @@ abstract class Database
     abstract public function db(): string;
 }
 
-class Dbname extends Database
+class Books extends Database
 
 {
     public function db():string
@@ -28,6 +28,6 @@ class Dbname extends Database
     }
 }
 
-$new = new DbName();
+$new = new Books();
 $new->db();
 
