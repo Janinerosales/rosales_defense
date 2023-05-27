@@ -16,4 +16,3 @@ abstract class Database
     }
     abstract public function db(): string;
 }
-
