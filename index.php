@@ -22,4 +22,4 @@ class Database
     }
     
 }
-$j=new Database;
+
