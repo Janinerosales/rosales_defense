@@ -1,6 +1,6 @@
 <?php
 
-abstract class Database
+class Database
 {
     public $conn;
     public $servername = "localhost";
@@ -12,7 +12,14 @@ abstract class Database
     {
         $this->conn = new mysqli($this->servername, $this->username, $this->password);
         
-        //$this->conn->query($db);
+        $create="CREATE DATABASE IF NOT EXISTS $this->dbName";
+        $this->conn->query($create);
+        $use-"USE $this->dbName";
+        %this->conn->query($use);
+       
+     var_dump($his->conn->error);
+       
     }
-    abstract public function db(): string;
+    
 }
+$j=new Database;
