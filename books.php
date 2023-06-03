@@ -1,17 +1,20 @@
 <?php
-
+include 'index.php';
 class Books extends Database
 
 {
-    public function db():string
+    public $tblName = "books";
+    
+    public function createTable()
     {
-        $dbName ="CREATE DATABASE IF NOT EXISTS $this->dbName";
-        
-        return $this->conn->query($dbName);
+        $this->construct();
+        $tbl ="CREATE TABLE IF NOT EXISTS $this->$tblName
+        (id int auto_increment primary key,
+        book_name text,
+        author text)";
+     $this->conn->query($tbl);
+     var_dump($this->conn-error);
     }
 }
-
-$new = new Books();
-$new->db();
 
 ?>
