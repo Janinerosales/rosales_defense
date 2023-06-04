@@ -15,7 +15,7 @@ class Database
         $create="CREATE DATABASE IF NOT EXISTS $this->dbName";
         $this->conn->query($create);
         $use-"USE $this->dbName";
-        %this->conn->query($use);
+        $this->conn->query($use);
        
      var_dump($his->conn->error);
        
